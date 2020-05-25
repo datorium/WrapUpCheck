@@ -39,7 +39,7 @@ namespace WrapUpCheck
 
             foreach(Student s in students)
             {
-                Console.WriteLine(s.Name);
+                Console.WriteLine(s.Name + " is from " + s.School);
             }          
             
             Console.ReadKey();
@@ -54,12 +54,22 @@ namespace WrapUpCheck
         public string Surname { get; set; }
         public int Age { get; set; }
         public int Grade {get; set;}
+        public string School { get; private set; } = "Datorium";
 
         public Student()
         {
-            Console.Write("Hi, I am created! I do not know my name.");
+            Console.Write("Hi, I am created! I do not know my name.\n");
             Console.ReadKey();
         }
+
+        public void ChangeSchool(string schoolName)
+        {
+            if(schoolName != "Datorium" || schoolName != "Stanford" || schoolName != "Oxford")
+            {
+                Console.WriteLine("Use only authorised schools");
+            }
+        }
+
     }
 
 }
