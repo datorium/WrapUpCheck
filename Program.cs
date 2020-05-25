@@ -18,18 +18,21 @@ namespace WrapUpCheck
             students[0].Surname = "Lopez";
             students[0].Age = 15;
             students[0].Grade = 8;
+            students[0].ChangeSchool("Stanford");
 
             students.Add(new Student());
             students[1].Name = "Matiss";
             students[1].Surname = "Jackson";
             students[1].Age = 16;
             students[1].Grade = 7;
+            students[1].ChangeSchool("Farmford");
 
             students.Add(new Student());
             students[2].Name = "Anna";
             students[2].Surname = "Ozolina";
             students[2].Age = 14;
             students[2].Grade = 7;
+            students[2].ChangeSchool("Oxford");
 
             students.Add(new Student());
             students[3].Name = "Babatunde";
@@ -64,7 +67,7 @@ namespace WrapUpCheck
 
         public void ChangeSchool(string schoolName)
         {
-            if(schoolName != "Datorium" || schoolName != "Stanford" || schoolName != "Oxford")
+            if(schoolName != "Datorium" && schoolName != "Stanford" && schoolName != "Oxford")
             {
                 //change denied
                 Console.WriteLine("Use only authorised schools");
@@ -75,7 +78,6 @@ namespace WrapUpCheck
                 this.School = schoolName;
             }
         }
-
     }
 
 }
