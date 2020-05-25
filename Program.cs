@@ -66,7 +66,13 @@ namespace WrapUpCheck
         {
             if(schoolName != "Datorium" || schoolName != "Stanford" || schoolName != "Oxford")
             {
+                //change denied
                 Console.WriteLine("Use only authorised schools");
+            }
+            else
+            {
+                //change allowed
+                this.School = schoolName;
             }
         }
 
